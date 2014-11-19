@@ -28,7 +28,10 @@
 
          path.readdirSync('./ext/jsam').forEach(function(v,k,a)
          {
-            rsl[k] = require('./ext/jsam/'+v);
+            var cmp=null, dtd=null;
+
+            dtd = require('../ext/jsam/'+v+'/dtd.json');
+
          });
 
          return rsl;
