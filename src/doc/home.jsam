@@ -1,0 +1,18 @@
+
+   ({"text/html":
+   [
+      {head:
+      [
+         {title: 'website title'},
+         {script: embed({file: './src/jsc/testing.js'})},
+         {style: embed({file: './src/stl/styles.css'})}
+      ]},
+
+      {body:
+      [
+         include('./src/obj/sample.jsam'),
+         {h1: 'Home Page beeg heading'},
+         {p: 'Some paragraph text'},
+         {table: embed({data:'ello'})}
+      ]},
+   ]})
