@@ -116,14 +116,6 @@
                return JSAM.parse(path.readFileSync(pth, {encoding:'utf8'}), ctx, true).context;
             }
          };
-
-         ctx.embed = function(obj)
-         {
-            if (typeOf(obj) != 'object')
-            { return 'object expected'; }
-
-            return {"_embed":obj};
-         };
       }
 
       dfn = '_context='+dfn;
@@ -146,9 +138,3 @@
       return rsl;
    };
 // ========================================================================================================
-
-   var str = path.readFileSync('./src/doc/home.jsam', {encoding:'utf8'});
-   var ctx = JSAM.parse(str, {name:'Simonne'});
-   var rsl = JSAM.parse(str, {name:'Simonne'}).compile();
-
-//   stdout(rsl);

@@ -125,12 +125,21 @@
                   {
                      for (var i in atr)
                      {
-                        if ((i == '_embed') && (typeOf(atr[i]) == 'object'))
+                        if (i == 'src')
                         {
-                           var embOpt = Object.keys(atr[i])[0];
-                           var embVal = atr[i][embOpt];
+                           if ((typeOf(atr[i]) == 'string') && (atr[i].type == 'path') && (atr[i][0] == '.'))
+                           {
+                              val = atr[i];
 
-//                           stdout(embOpt+':'+embVal);
+                              if (!path.existsSync(val))
+                              { val = '404'; }
+                              else
+                              { val = path.readFileSync(val, {encoding:'utf8'}); }
+                           }
+                           else if (typeOf(atr[i]) == 'object')
+                           {}
+                           else
+                           { rsl += ' '+i+'="'+atr[i]+'"'; }
                         }
                         else
                         { rsl += ' '+i+'="'+atr[i]+'"'; }
