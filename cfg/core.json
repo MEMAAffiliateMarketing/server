@@ -1,0 +1,14 @@
+{
+	"systemMode":"dev",
+
+   "reqOnceLst":["../mod/webServer/admin.js"],
+
+   "procPerCPU":2,
+   "timeOutSec":5,
+
+	"distribute":{
+                  "dataBase":1,
+                  "messaging":1,
+                  "webServer":"avl"
+				    }
+}

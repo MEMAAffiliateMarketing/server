@@ -1,0 +1,7 @@
+{
+	"init" : [
+					{"server":{"mules":"any"}}
+				],
+
+	"mode" : "dev"
+}

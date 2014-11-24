@@ -1,0 +1,29 @@
+{
+   "methods"   :  {"HEAD":true, "GET":true, "PUT":true, "POST":true},
+
+   "headers"   :  {
+                     "Cache-Control": "no-cache"
+                  },
+
+   "reRoute"   :  {
+                     "/"            : "/doc/index.jsam",
+                     "/favicon.png" : "/gfx/icn/favicon.png",
+                     "/robots.txt"  : "/cfg/robots.txt"
+                  },
+
+   "charset"   :  "utf-8",
+
+   "listing"   :  true,
+
+   "showErr"   :  true,
+
+   "denyMod"   :  {},
+
+   "denyPth"   :  {"/cfg":true, "/doc":true, "/mod":true, "/stl":true},
+
+   "denyExt"   :  {},
+
+   "authFor"   :  {},
+
+   "banList"   :  {}
+}

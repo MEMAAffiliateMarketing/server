@@ -1,0 +1,30 @@
+{
+   "srvMode": {"dev":true, "www":false},
+
+   "address": "auto",
+   "tcpPort": 80,
+
+   "ipDscvr": {
+                  "dev":"ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/'",
+                  "www":"curl ident.me"
+              },
+
+   "hostDir": "/srv",
+
+   "methods": {"HEAD":true, "GET":true, "PUT":true, "POST":true},
+   "headers": {"Server":"Vorium"},
+   "charset": "utf-8",
+
+   "reRoute": {
+                  "/"            : "/doc/index.jsd",
+                  "/favicon.png" : "/gfx/icn/favicon.png",
+                  "/robots.txt"  : "/cfg/robots.txt"
+              },
+
+   "listing": false,
+   "denyMod": {},
+   "denyPth": {"/cfg":true, "/doc":true, "/mod":true, "/stl":true},
+   "denyExt": {},
+   "authFor": {},
+   "banList": {}
+}

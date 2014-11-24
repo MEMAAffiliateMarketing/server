@@ -1,0 +1,9 @@
+{
+   "usage"  :  {
+                  "checkUsageSec" : 5,
+                  "maxHDDPercent" : 96,
+                  "maxRAMPercent" : 96,
+                  "maxCPUPercent" : 100,
+                  "CPUfatigueSec" : 30
+               }
+}
